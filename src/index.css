@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer utilities {
-  .bg-primary   { background‑color:#1e1b4b; }  /* dark indigo  */
-  .bg-secondary { background‑color:#4c1d95; }  /* deep purple  */
+  .bg-primary   { background-color:#1e1b4b; }  /* re‑typed dash */
+  .bg-secondary { background-color:#4c1d95; }  /* re‑typed dash */
 }
-

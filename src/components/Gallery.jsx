@@ -1,6 +1,5 @@
 import ProjectCard from "./ProjectCard";
 
-/* Dummy data for now – replace mediaSrc paths with your files in public/ */
 const projects = [
   {
     title: "Three.js GLaDOS Bot",
@@ -11,7 +10,7 @@ const projects = [
   {
     title: "Neural‑net Shader Demo",
     description: "WebGPU compute preview.",
-    mediaSrc: "/images/shader.png",
+    mediaSrc: "/images/Pasted.png",
     isVideo: false,
   },
 ];
