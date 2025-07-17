@@ -1,5 +1,6 @@
 const projects = [
   {
+    slug: "test",
     title: "Three.js GLaDOS Bot",
     description: "Real‑time avatar driven by Discord voice.",
     date: "2025-07-14",

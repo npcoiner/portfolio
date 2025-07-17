@@ -1,10 +1,9 @@
-import { useState } from "react";
 import Card from "./Card";
 import Article from "./Article";
 import projectsData from "../data/projectsData.js";
-const projects = projectsData
-export default function GalleryProjects() {
-  const [selected, setSelected] = useState(null);
+
+export default function GalleryProjects({ articleId, setArticleId }) {
+  const selected = projectsData.find((p) => p.slug === articleId) ?? null;
 
   return (
     <div style={{ display: "flex", justifyContent: "center", padding: "64px 16px" }}>
@@ -26,15 +25,15 @@ export default function GalleryProjects() {
               gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
             }}
           >
-            {projects.map((p) => (
-              <div key={p.title} onClick={() => setSelected(p)} style={{ cursor: "pointer" }}>
+            {projectsData.map((p) => (
+              <div key={p.title} onClick={() => setArticleId(p.slug)} style={{ cursor: "pointer" }}>
                 <Card {...p} />
               </div>
             ))}
           </div>
         </div>
       ) : (
-        <Article project={selected} onBack={() => setSelected(null)} />
+        <Article project={selected} onBack={() => setArticleId(null)} />
       )}
     </div>
   );
