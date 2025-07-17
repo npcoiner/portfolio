@@ -1,18 +1,23 @@
+import { useState } from "react";
 import Header from "./components/Header";
-import Gallery from "./components/Gallery";
+import GalleryProjects from "./components/GalleryProjects";
+import GalleryBlog from "./components/GalleryBlog";
 import Footer from "./components/Footer";
 
 function App() {
+  const [view, setView] = useState("projects"); // "projects" | "blog"
+
   return (
     <div className="min-h-screen flex flex-col bg-primary">
-      <Header />
+      <Header currentView={view} setView={setView} />
+
       <main className="flex-grow">
-        <Gallery />
+        {view === "projects" ? <GalleryProjects /> : <GalleryBlog />}
       </main>
+
       <Footer />
     </div>
   );
 }
 
 export default App;
-
