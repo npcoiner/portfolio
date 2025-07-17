@@ -48,11 +48,11 @@ export default function Header({ currentView, setView }) {
               maxWidth: "260px",
             }}
           >
-            Nick — Developer Showcase
+            Nicholas Coiner
           </h1>
 
           <span style={{ fontSize: "0.9rem", opacity: 0.85 }}>
-            Full‑stack engineer focusing on 3D&nbsp;graphics, WebGPU, and AI.
+            Full‑stack engineer focusing on 3D graphics, WebGPU, and AI.
           </span>
 
           <SocialLinks />
